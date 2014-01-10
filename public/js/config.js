@@ -4,6 +4,9 @@
 angular.module('mean').config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
+        when('/logReader', {
+            templateUrl: 'views/monitor/logreader.html'
+        }).
         when('/articles', {
             templateUrl: 'views/articles/list.html'
         }).

@@ -72,6 +72,10 @@ module.exports = function(app, passport, auth) {
     //Finish with setting up the articleId param
     app.param('articleId', articles.article);
 
+    //Logs Routes
+    var logs = require('../app/controllers/logReader');
+    app.get('/logs', logs.all);
+
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);

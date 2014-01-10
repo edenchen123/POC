@@ -3,11 +3,11 @@
     <span>{{article.user.name}}</span>
     <h2>{{article.title}}</h2>
     <div data-ng-show="global.user._id == article.user._id">
-        <a class="btn" href="/#!/articles/{{article._id}}/edit">
-        	<i class="icon-edit"></i>
+        <a href="/#!/articles/{{article._id}}/edit">
+        	<span class="glyphicon glyphicon-wrench"></span>
         </a> 
-        <a class="btn" data-ng-click="remove();">
-            <i class="icon-trash"></i>
+        <a href="" data-ng-click="remove();">
+            <span class="glyphicon glyphicon-minus"></span>
         </a>
     </div>
     <div>{{article.content}}</div>

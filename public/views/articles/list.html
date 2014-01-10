@@ -1,9 +1,9 @@
 <section data-ng-controller="ArticlesController" data-ng-init="find()">
-	<ul class="articles unstyled">
+	<ul>
 		<li data-ng-repeat="article in articles">
 			<span>{{article.created | date:'medium'}}</span> /
 			<span>{{article.user.name}}</span>
-			<h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h2>
+			<h4><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h4>
 			<div>{{article.content}}</div>
 		</li>
 	</ul>

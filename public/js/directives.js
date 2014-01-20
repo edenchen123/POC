@@ -1,12 +1,6 @@
 'use strict';
 
-angular.module('mean').directive('stickUp',function(){
-    return{
-        link:function(scope, element,attr){
-            element.stickUp();
-        }
-    };
-})
+angular.module('mean')
 .directive('headRoom', function() {
     return {
       restrict: 'EA',

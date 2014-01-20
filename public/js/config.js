@@ -19,6 +19,12 @@ angular.module('mean').config(['$routeProvider',
         when('/articles/:articleId', {
             templateUrl: 'views/articles/view.html'
         }).
+        when('/customers', {
+            templateUrl: 'views/customers/customers.html'
+        }).
+        when('/customeredit/:customerID', {
+            templateUrl: 'views/customers/customerEdit.html'
+        }).
         when('/', {
             templateUrl: 'views/index.html'
         }).
@@ -33,4 +39,9 @@ angular.module('mean').config(['$locationProvider',
     function($locationProvider) {
         $locationProvider.hashPrefix('!');
     }
-]);
+])
+
+var config = {
+    useBreeze: false
+};
+angular.module('mean').value('config', config);;

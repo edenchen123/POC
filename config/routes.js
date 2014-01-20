@@ -76,6 +76,20 @@ module.exports = function(app, passport, auth) {
     var logs = require('../app/controllers/logReader');
     app.get('/logs', logs.all);
 
+    //Customer Management
+    var customer = require('../app/controllers/custmgr');
+    app.get('/Customers', customer.customers);
+    app.get('/Customer/:id', customer.customer);
+    app.post('/PostCustomer', customer.addCustomer);
+    app.put('/PutCustomer/:id', customer.editCustomer);
+    app.delete('/DeleteCustomer/:id', customer.deleteCustomer);
+
+    app.get('/States', customer.states);
+
+    app.get('/CustomersSummary', customer.customers);
+    app.get('/CustomerById/:id', customer.customer);
+//    app.get('/CheckUnique/:email', customer.checkemail);
+
     //Home route
     var index = require('../app/controllers/index');
     app.get('/', index.render);

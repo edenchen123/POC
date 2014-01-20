@@ -1,0 +1,266 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+	font-family: 'Nick Glade';
+	src: url('../fonts/NickGlade.ttf');
+	src: url('../fonts/NickGlade.eot?#iefix') format('embedded-opentype'), url('../fonts/NickGlade.woff') format('woff'), url('../fonts/NickGlade.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Nick Glade Bold';
+	src: url('../fonts/NickGladeB.ttf');
+	src: url('../fonts/NickGladeB.ttf') format('truetype');
+}
+html, body {
+	font-family: 'Nick Glade';
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+.poc-nav > li > a {
+	font-size: 22px;
+	line-height: 30px;
+}
+.poc-nav-right {
+	float: right;
+}
+
+
+.navbar-toggle {
+	position: relative;
+	float: right;
+	padding: 9px 10px;
+	margin-top: 13px;
+	margin-right: 15px;
+	margin-bottom: 13px;
+	background-color: transparent;
+	background-image: none;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+.poc-nav-container {
+	min-height: 60px;
+}
+.navbar-brand {
+	font-family: 'Nick Glade Bold';
+	float: left;
+	padding: 15px 15px;
+	font-size: 32px;
+	line-height: 30px;
+	font-weight: bolder;
+}
+.poc-nav-inverse {
+	background: url(../img/Nav_Background.png) repeat-x;
+	background-color: #222222;
+	border-color: #080808;
+}
+.poc-nav-inverse .navbar-brand {
+	color: #09F;
+}
+.poc-nav-inverse .navbar-brand:hover, .poc-nav-inverse .navbar-brand:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+.poc-nav-inverse .navbar-text {
+	color: #999999;
+}
+.poc-nav-inverse .navbar-nav > li > a {
+	color: #afbcc5;
+}
+.poc-nav-inverse .navbar-nav > li > a:hover, .poc-nav-inverse .navbar-nav > li > a:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+.poc-nav-inverse .navbar-nav > .active > a, .poc-nav-inverse .navbar-nav > .active > a:hover, .poc-nav-inverse .navbar-nav > .active > a:focus {
+	color: #ffffff;
+	background-color: #080808;
+}
+.poc-nav-inverse .navbar-nav > .disabled > a, .poc-nav-inverse .navbar-nav > .disabled > a:hover, .poc-nav-inverse .navbar-nav > .disabled > a:focus {
+	color: #444444;
+	background-color: transparent;
+}
+.poc-nav-inverse .navbar-toggle {
+	border-color: #333333;
+}
+.poc-nav-inverse .navbar-toggle:hover, .poc-nav-inverse .navbar-toggle:focus {
+	background-color: #333333;
+}
+.poc-nav-inverse .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+.poc-nav-inverse .navbar-collapse, .poc-nav-inverse .navbar-form {
+	border-color: #101010;
+}
+.poc-nav-inverse .navbar-nav > .open > a, .poc-nav-inverse .navbar-nav > .open > a:hover, .poc-nav-inverse .navbar-nav > .open > a:focus {
+	color: #ffffff;
+	background-color: #080808;
+}
+ @media (max-width: 767px) {
+.poc-nav-inverse .navbar-nav .open .dropdown-menu > .dropdown-header {
+	border-color: #080808;
+}
+.poc-nav-inverse .navbar-nav .open .dropdown-menu .divider {
+	background-color: #080808;
+}
+.poc-nav-inverse .navbar-nav .open .dropdown-menu > li > a {
+	color: #999999;
+}
+.poc-nav-inverse .navbar-nav .open .dropdown-menu > li > a:hover,  .poc-nav-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+	color: #ffffff;
+	background-color: transparent;
+}
+.poc-nav-inverse .navbar-nav .open .dropdown-menu > .active > a,  .poc-nav-inverse .navbar-nav .open .dropdown-menu > .active > a:hover,  .poc-nav-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+	color: #ffffff;
+	background-color: #080808;
+}
+.poc-nav-inverse .navbar-nav .open .dropdown-menu > .disabled > a,  .poc-nav-inverse .navbar-nav .open .dropdown-menu > .disabled > a:hover,  .poc-nav-inverse .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+	color: #444444;
+	background-color: transparent;
+}
+}
+.poc-header {
+	background: url(../img/header_background.jpg) repeat-x;
+	height: 260px;
+	margin-bottom:-60px;
+}
+.poc-header > .container > h1 {
+	font-family: 'Nick Glade Bold';
+	font-weight: bolder;
+	font-size: 60px;
+	color: white;
+	text-shadow: #000 -1px -1px 0;
+}
+.poc-header > .container > p {
+	font-family: 'Nick Glade Bold';
+	font-size: 18px;
+	color: white;
+}
+.poc-header > .container {
+	padding-top: 80px;
+}
+.folderUp{position:relative;width:100%; height:60px;}
+.folderDown{position:relative; z-index:1;width:100%; height:40px; background:url(../img/folderBar_background.jpg) repeat-x;	box-shadow:#333 0px 3px 5px;}
+
+.folderBar{
+	width:100%;
+	height:100px;
+	z-index:5;
+	}
+.folderBar .container > .glyphicon{
+	font-size:20px;
+	margin-top:8px;
+	float:left;
+	}
+.folderBar .container > p{
+	font-size:18px;
+	margin:8px 15px;
+	float:left;
+}
+.content{
+	margin-top:20px;
+	width:100%;
+	height:1200px;
+	}
+.opt-menu{
+	border: 1px solid #222;
+	border-radius:10px;
+	box-shadow:#333 0px 3px 5px;
+	z-index:2;
+	}
+.opt-menu > div:first-child{
+	border-radius:8px 8px 0 0;
+	border-bottom: 1px solid #222;
+	font-family: 'Nick Glade Bold';
+	font-size:20px;
+	line-height:45px;
+	color:#fff;
+	}
+.opt-menu > div:last-child{
+	border-radius:0 0 8px 8px;
+	}	
+.opt-menu-list-item{
+	padding:10px;
+    background:#333;
+    display: block;
+    margin-bottom: 0px;
+	height:45px;
+    position: relative;
+	width:100%;
+	color:#ffffff;
+	line-height: 28px;
+	font-size: 18px;
+	}
+.dropdown a{
+	color:#FFF;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.dropdown a:hover, .dropdown a:focus{
+	outline:none;
+	text-decoration:none;
+	cursor:pointer;
+	}
+.opt-menu-title{
+	padding:0 20px;
+	}
+.dropdown-menu{
+	width:100%;
+	}
+.opt-menu-up{
+	position:relative;width:100%; height:100px;
+	}
+@media (max-width: 767px) {
+	.opt-menu.affix {
+	position:fixed;
+	top:56px;
+	left:0;
+	width:100%;
+	}
+	.opt-menu.affix-top {
+	position:relative;
+	top:0px;
+	left:0;
+	width:100%;
+	}
+}
+@media (min-width: 768px) {
+	.opt-menu.affix {
+	position:fixed;
+	top:90px;
+	width:718px;
+	}
+@media (min-width: 992px) {
+.opt-menu.affix {
+	position:fixed;
+	top:120px;
+	width:214px;
+	}
+	}
+@media (min-width: 1200px) {
+	.opt-menu.affix {
+	position:fixed;
+	top:120px;
+	width:262px;
+	}
+}
+.center {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-left: -20px;
+	margin-top: -20px;
+}
+.toTop{
+	background: white;
+	border: 1px solid #333;
+	bottom: 5%;
+	position: fixed;
+	right: 5%;
+	width: 40px;
+	height: 40px;
+	z-index: 99;
+	border-radius: 10px;
+}
+}
+.mainView{
+    position: relative;
+}

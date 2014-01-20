@@ -1,33 +1,85 @@
-<nav class="navbar navbar-default" role="navigation" data-ng-controller="HeaderController" head-room>
-    <ul class="nav navbar-nav">
-        <li>
-            <a class="navbar-brand" href="/">POC - on top of MEAN</a>
-        </li>
-        <li ui-route="/logReader" ng-class="{active: $uiRoute}">
-            <a href="#!/logReader" data-ng-show="global.user">Log Reader</a>
-        </li>
-        <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}"
-            ng-class="{active: $uiRoute}">
-            <a href="#!/{{item.link}}">{{item.title}}</a>
-        </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" data-ng-hide="global.authenticated">
-        <li><a href="signup">Signup</a>
-        </li>
-        <li class="divider-vertical"></li>
-        <li><a href="signin">Signin</a>
-        </li>
-    </ul>
-    <ul class="nav navbar-nav navbar-right" data-ng-show="global.authenticated">
-        <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                {{global.user.name}} <b class="caret"></b>
-            </a>
-            <ul class="dropdown-menu">
-                <li><a href="/signout">Signout</a>
+<header class="navbar navbar-fixed-top poc-navbar poc-nav-inverse" data-ng-controller="HeaderController">
+    <div class="container poc-nav-container">
+        <div class="navbar-header">
+            <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button"><span
+                    class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+            <a href="#!/" class="navbar-brand hidden-sm">PoC for WEB APP.</a></div>
+        <div class="navbar-collapse collapse" style="height: auto;">
+            <ul class="nav navbar-nav poc-nav">
+                <li ui-route="/" ng-class="{active: $uiRoute}"><a href="#!/">HOME</a></li>
+                <li ui-route="/logReader" ng-class="{active: $uiRoute}" data-ng-show="global.user">
+                    <a href="#!/logReader">Log Reader</a>
+                </li>
+                <li ui-route="/customers" ng-class="{active: $uiRoute}" data-ng-show="global.user">
+                    <a href="#!/customers">Customers</a>
                 </li>
             </ul>
-        </li>
-    </ul>
-</nav>
+            <ul class="nav navbar-nav poc-nav-right" data-ng-hide="global.authenticated">
+                <li><a href="signup">Signup</a>
+                </li>
+                <li class="divider-vertical"></li>
+                <li><a href="signin">Signin</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav poc-nav-right" data-ng-show="global.authenticated">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        {{global.user.name}} <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/signout">Signout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+<div id="content" class="poc-header">
+		<div class="container">
+				<h1>LOG MONITOR</h1>
+				<p> You can monitor you app log from any datasource with this section. </p>
+		</div>
+</div>
+<div class="folderBar">
+		<div class="folderUp"></div>
+		<div class="folderDown">
+				<div class="container"> <span class="glyphicon glyphicon-folder-open"></span>
+						<p> - file system/mongodb/RSDB</p>
+				</div>
+		</div>
+</div>
+
+<!--<nav class="navbar navbar-default" role="navigation" data-ng-controller="HeaderController" head-room>-->
+    <!--<ul class="nav navbar-nav">-->
+        <!--<li>-->
+            <!--<a class="navbar-brand" href="/">POC - on top of MEAN</a>-->
+        <!--</li>-->
+        <!--<li ui-route="/logReader" ng-class="{active: $uiRoute}">-->
+            <!--<a href="#!/logReader" data-ng-show="global.user">Log Reader</a>-->
+        <!--</li>-->
+        <!--<li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}"-->
+            <!--ng-class="{active: $uiRoute}">-->
+            <!--<a href="#!/{{item.link}}">{{item.title}}</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<ul class="nav navbar-nav navbar-right" data-ng-hide="global.authenticated">-->
+        <!--<li><a href="signup">Signup</a>-->
+        <!--</li>-->
+        <!--<li class="divider-vertical"></li>-->
+        <!--<li><a href="signin">Signin</a>-->
+        <!--</li>-->
+    <!--</ul>-->
+    <!--<ul class="nav navbar-nav navbar-right" data-ng-show="global.authenticated">-->
+        <!--<li class="dropdown">-->
+            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                <!--{{global.user.name}} <b class="caret"></b>-->
+            <!--</a>-->
+            <!--<ul class="dropdown-menu">-->
+                <!--<li><a href="/signout">Signout</a>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</nav>-->
 

@@ -10,6 +10,7 @@
         "angular-route": "latest",
         "bootstrap": "latest",
         "angular-bootstrap": "latest",
-        "angular-ui-utils": "latest"
+        "angular-ui-utils": "latest",
+        "bower-breeze": "1.4.4"
     }
 }

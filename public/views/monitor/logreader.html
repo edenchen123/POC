@@ -1,70 +1,65 @@
 <div data-ng-controller="LogReaderController" data-ng-init="getLogs()">
-<div class="container">
-    <nav class="navbar navbar-default navbar-inverse" role="navigation" stick-up>
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="container">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-            <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span></button>
-        <a class="navbar-brand" href="#">Log Reader</a></div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-left">
-            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Choose Level<b
-                    class="caret"></b></a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">All</a></li>
-                    <li><a href="#">Level one</a></li>
-                    <li><a href="#">Level two</a></li>
-                    <li><a href="#">Level three</a></li>
-                    <li><a href="#">Level four</a></li>
-                    <li><a href="#">Level five</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Other Options</a></li>
-                </ul>
-            </li>
-        </ul>
-        <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Start Date">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="End Date">
-            </div>
-            <button type="submit" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-filter"></span>
-            </button>
-        </form>
-        <form class="navbar-form navbar-right" role="search">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-default btn-primary"><span class="glyphicon glyphicon-search"></span>
-            </button>
-        </form>
-    </div>
-    </div>
-    <!-- /.navbar-collapse -->
-</nav>
+<div class="row">
+		<div class="col-md-3">
+				<!--<div class="hidden-xs hidden-sm" style="height:120px; width:100%"></div>-->
+				<div data-spy="affix" data-offset-top="200" class="opt-menu" role="complementary" ng-affix>
+						<div class="opt-menu-list-item opt-menu-title">Log Oprator</div>
+						<div class="opt-menu-list-item dropdown"> <a class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+								<ul class="dropdown-menu">
+										<li><a href="#" >Level 1</a></li>
+										<li><a href="#">Level 2</a></li>
+										<li><a href="#">Level 3</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Level 4</a></li>
+										<li class="divider"></li>
+										<li><a href="#">Level 5</a></li>
+								</ul>
+						</div>
+						<div class="opt-menu-list-item">
+								<div class="input-group">
+										<input type="text" class="form-control" value="Search">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+										</span> </div>
+						</div>
+						<div class="opt-menu-list-item">
+								<div class="input-group">
+										<input type="text" class="form-control" value="Start Date">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+										</span> </div>
+						</div>
+						<div class="opt-menu-list-item">
+								<div class="input-group">
+										<input type="text" class="form-control" value="End Date">
+										<span class="input-group-btn">
+										<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-calendar"></span></button>
+										<button class="btn btn-default" type="button"><span class="glyphicon glyphicon-filter"></span></button>
+										</span> </div>
+						</div>
+						<div class="opt-menu-list-item">Back to Top</div>
+				</div>
+		</div>
+		<div class="col-md-9" role="main">
+				<table border="0" cellspacing="0" cellpadding="0" class="table table-responsive table-condensed table-hover table-striped">
+                    <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Timestamp</th>
+                        <th>Host</th>
+                        <th>Message</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr data-ng-repeat="log in logs" class="repeat-animation">
+                        <td ng-bind="log.level">N/A</td>
+                        <td ng-bind="log.timestamp">N/A</td>
+                        <td ng-bind="log.host.name">N/A</td>
+                        <td ng-bind="log.message">N/A</td>
+                    </tr>
+                    </tbody>
+				</table>
+		</div>
+		</div>
 </div>
-<table border="0" cellspacing="0" cellpadding="0"
-       class="table table-responsive table-condensed table-hover table-striped ">
-<thead>
-<tr>
-    <th>Level</th>
-    <th>Timestamp</th>
-    <th>Host</th>
-    <th>Message</th>
-</tr>
-</thead>
-<tbody>
-<tr data-ng-repeat="log in logs" class="repeat-animation">
-    <td ng-bind="log.level">N/A</td>
-    <td ng-bind="log.timestamp">N/A</td>
-    <td ng-bind="log.host.name">N/A</td>
-    <td ng-bind="log.message">N/A</td>
-</tr>
-</tbody>
-</table>
 </div>
